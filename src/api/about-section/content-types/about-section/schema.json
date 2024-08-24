@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_sections",
+  "info": {
+    "singularName": "about-section",
+    "pluralName": "about-sections",
+    "displayName": "About Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "A propos de cette plateforme",
+      "maxLength": 30
+    },
+    "description": {
+      "type": "text",
+      "default": "Cette plateforme de ressources éducatives pour le soja est conçue pour fournir aux agriculteurs des informations clés sur la culture du soja, allant des bonnes pratiques aux techniques avancées. Le partenariat de niveau 2 (N2) implique une collaboration avec des organisations locales, des instituts de recherche et des ONG, qui contribuent à fournir des ressources adaptées et à partager leur expertise pour soutenir les agriculteurs dans l'amélioration de leurs pratiques.",
+      "maxLength": 500
+    },
+    "cta_text": {
+      "type": "string",
+      "default": "Commencez maintenant",
+      "maxLength": 20
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
