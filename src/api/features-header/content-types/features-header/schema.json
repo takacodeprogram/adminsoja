@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "features_headers",
+  "info": {
+    "singularName": "features-header",
+    "pluralName": "features-headers",
+    "displayName": "Features Header"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 70,
+      "default": "Accédez aux meilleurs outils éducatifs pour la filière Soja"
+    },
+    "subtitle_1": {
+      "type": "string",
+      "maxLength": 70,
+      "default": "Accédez aux meilleurs outils éducatifs pour la filière Soja."
+    },
+    "subtitle_2": {
+      "type": "string",
+      "maxLength": 180,
+      "default": "Notre plateforme vous offre des ressources éducatives complètes pour réussir dans la culture du soja, avec des outils de formation et des documents pratiques à portée de main."
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "features_steps",
+  "info": {
+    "singularName": "features-step",
+    "pluralName": "features-steps",
+    "displayName": "Features Step"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 40
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 210
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

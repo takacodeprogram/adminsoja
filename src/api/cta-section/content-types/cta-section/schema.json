@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "cta_sections",
+  "info": {
+    "singularName": "cta-section",
+    "pluralName": "cta-sections",
+    "displayName": "Cta Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 100,
+      "default": "Optimisez vos pratiques agricoles. Découvrez des ressources éducatives illimitées."
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 300,
+      "default": "Accédez à des guides complets, des études de cas et des formations spécifiques sur la culture du soja. Transformez votre manière de cultiver et maximisez vos rendements grâce à nos outils et ressources adaptés aux défis modernes de l’agriculture."
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

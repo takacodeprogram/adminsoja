@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clerk_users",
+  "info": {
+    "singularName": "clerk-user",
+    "pluralName": "clerk-users",
+    "displayName": "ClerkUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "profile_image_url": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "sex": {
+      "type": "string"
+    },
+    "profession": {
+      "type": "string"
+    },
+    "organization_name": {
+      "type": "string"
+    }
+  }
+}
