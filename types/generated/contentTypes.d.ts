@@ -834,37 +834,6 @@ export interface ApiAboutSectionAboutSection extends Schema.SingleType {
   };
 }
 
-export interface ApiCategorieCategorie extends Schema.CollectionType {
-  collectionName: 'categories';
-  info: {
-    singularName: 'categorie';
-    pluralName: 'categories';
-    displayName: 'Categorie';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::categorie.categorie',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::categorie.categorie',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiClerkUserClerkUser extends Schema.CollectionType {
   collectionName: 'clerk_users';
   info: {
@@ -881,11 +850,13 @@ export interface ApiClerkUserClerkUser extends Schema.CollectionType {
     first_name: Attribute.String;
     last_name: Attribute.String;
     profile_image_url: Attribute.String;
-    birthdate: Attribute.Date;
     slug: Attribute.UID;
     sex: Attribute.String;
-    profession: Attribute.String;
-    organization_name: Attribute.String;
+    commune: Attribute.String;
+    arrondissement: Attribute.String;
+    village: Attribute.String;
+    animateur: Attribute.String;
+    active: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1072,61 +1043,6 @@ export interface ApiHeroSectionHeroSection extends Schema.SingleType {
   };
 }
 
-export interface ApiLikeLike extends Schema.CollectionType {
-  collectionName: 'likes';
-  info: {
-    singularName: 'like';
-    pluralName: 'likes';
-    displayName: 'Like';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    resource: Attribute.BigInteger;
-    clerk_user: Attribute.BigInteger;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::like.like', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::like.like', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiProfessionProfession extends Schema.CollectionType {
-  collectionName: 'professions';
-  info: {
-    singularName: 'profession';
-    pluralName: 'professions';
-    displayName: 'Profession';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::profession.profession',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::profession.profession',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiResourceResource extends Schema.CollectionType {
   collectionName: 'resources';
   info: {
@@ -1217,14 +1133,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-section.about-section': ApiAboutSectionAboutSection;
-      'api::categorie.categorie': ApiCategorieCategorie;
       'api::clerk-user.clerk-user': ApiClerkUserClerkUser;
       'api::cta-section.cta-section': ApiCtaSectionCtaSection;
       'api::features-header.features-header': ApiFeaturesHeaderFeaturesHeader;
       'api::features-step.features-step': ApiFeaturesStepFeaturesStep;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
-      'api::like.like': ApiLikeLike;
-      'api::profession.profession': ApiProfessionProfession;
       'api::resource.resource': ApiResourceResource;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }

@@ -25,20 +25,27 @@
     "profile_image_url": {
       "type": "string"
     },
-    "birthdate": {
-      "type": "date"
-    },
     "slug": {
       "type": "uid"
     },
     "sex": {
       "type": "string"
     },
-    "profession": {
+    "commune": {
       "type": "string"
     },
-    "organization_name": {
+    "arrondissement": {
       "type": "string"
+    },
+    "village": {
+      "type": "string"
+    },
+    "animateur": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
