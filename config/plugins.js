@@ -7,7 +7,7 @@ module.exports = ({ env }) => ({
       },
       actionOptions: {
         upload: {
-          folder: './public/upload', // Chemin personnalisé pour les fichiers
+          folder: './public/uploads', // Chemin personnalisé pour les fichiers
         },
         delete: {},
       },
