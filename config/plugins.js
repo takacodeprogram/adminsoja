@@ -3,12 +3,10 @@ module.exports = ({ env }) => ({
     config: {
       provider: 'local',
       providerOptions: {
-        sizeLimit: 1000000, // Limite de taille en bytes (facultatif)
+        sizeLimit: 1000000, // Limite de taille en octets
       },
       actionOptions: {
-        upload: {
-          folder: './public/uploads', // Chemin personnalisé pour les fichiers
-        },
+        upload: {},
         delete: {},
       },
     },
